@@ -2,7 +2,6 @@ import { spec } from "pactum";
 import { setup } from "../config";
 import { supportFunction } from "@utils/support";
 
-
 // Pactum setup hook
 beforeAll(() => {
   setup();
