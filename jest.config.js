@@ -8,5 +8,5 @@ module.exports = {
     prefix: "<rootDir>/",
   }),
   transformIgnorePatterns: ["node_modules/poll"],
-  setupFiles: ["dotenv/config"]
+  setupFiles: ["dotenv/config"],
 };
