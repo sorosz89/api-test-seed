@@ -24,8 +24,8 @@ jobs:
       # Override language selection by choosing your languages. Learn more: https://aka.ms/codeql-docs/language-support
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
-         with:
-           languages: [ 'javascript', 'typescript' ]
+        with:
+          languages: javascript, typescript
 
 
       # Autobuild attempts to build any compiled languages (C/C++, C#, or Java).
