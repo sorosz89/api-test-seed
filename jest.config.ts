@@ -1,7 +1,11 @@
-const { pathsToModuleNameMapper } = require("ts-jest");
-const { compilerOptions } = require("./tsconfig");
+import type { Config } from "jest";
+import { pathsToModuleNameMapper } from "ts-jest";
+import { compilerOptions } from "./tsconfig.json";
 
-module.exports = {
+/**
+ * https://jestjs.io/docs/configuration
+ */
+const config: Config = {
   preset: "ts-jest",
   testEnvironment: "node",
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
@@ -23,3 +27,5 @@ module.exports = {
     ],
   ],
 };
+
+export default config;
