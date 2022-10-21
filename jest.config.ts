@@ -1,6 +1,7 @@
 import type { Config } from "jest";
 import { pathsToModuleNameMapper } from "ts-jest";
 import { compilerOptions } from "./tsconfig.json";
+import { getSuite } from "./config/args";
 
 /**
  * https://jestjs.io/docs/configuration
@@ -8,6 +9,7 @@ import { compilerOptions } from "./tsconfig.json";
 const config: Config = {
   preset: "ts-jest",
   testEnvironment: "node",
+  testMatch: getSuite(),
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: "<rootDir>/",
   }),
